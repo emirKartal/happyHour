@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>248921867296-fkl9c4etel2ktsn1t56827qs0cjvimbc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.248921867296-fkl9c4etel2ktsn1t56827qs0cjvimbc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBaUQaYtrHk7leI_gaqrA0c-hBf5Yj2HI4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>248921867296</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.emirkartal.happyHour</string>
+	<key>PROJECT_ID</key>
+	<string>happyhour-a225a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>happyhour-a225a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:248921867296:ios:ab2ec3d0d4a453a9</string>
+	<key>DATABASE_URL</key>
+	<string>https://happyhour-a225a.firebaseio.com</string>
+</dict>
+</plist>
