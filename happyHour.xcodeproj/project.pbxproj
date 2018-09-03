@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		300673502109DEF50069BD4D /* ProductListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006734F2109DEF50069BD4D /* ProductListVC.swift */; };
 		30067354210A62290069BD4D /* ShopListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30067353210A62290069BD4D /* ShopListCell.swift */; };
+		3039BA26213C1B5700C15B4C /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039BA25213C1B5700C15B4C /* LoginButton.swift */; };
+		3039BA28213C1F3B00C15B4C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039BA27213C1F3B00C15B4C /* SignUpVC.swift */; };
+		3039BA2A213C2AE300C15B4C /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039BA29213C2AE300C15B4C /* SignUpTextField.swift */; };
 		303C282921206C10002C28F0 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C282821206C10002C28F0 /* Networking.swift */; };
 		30424127211225AA000C74F7 /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30424126211225AA000C74F7 /* menuicon.png */; };
 		304FFD302108C0DE00353500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304FFD2F2108C0DE00353500 /* AppDelegate.swift */; };
@@ -18,7 +21,7 @@
 		304FFD3A2108C0E100353500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304FFD382108C0E100353500 /* LaunchScreen.storyboard */; };
 		304FFD422108C15F00353500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 304FFD412108C15F00353500 /* GoogleService-Info.plist */; };
 		3050C347210B531C00BE356E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050C346210B531C00BE356E /* CustomImageView.swift */; };
-		3050C349210B66BA00BE356E /* AddUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050C348210B66BA00BE356E /* AddUnderLine.swift */; };
+		3050C349210B66BA00BE356E /* AddUnderLineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050C348210B66BA00BE356E /* AddUnderLineProtocol.swift */; };
 		3050C34B210B67F700BE356E /* AddBorderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050C34A210B67F700BE356E /* AddBorderProtocol.swift */; };
 		30966149211336CB00FEA5E9 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30966148211336CB00FEA5E9 /* SideBarView.swift */; };
 		309F60D02108D74900AD7E86 /* ShopListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F60CF2108D74900AD7E86 /* ShopListVC.swift */; };
@@ -28,6 +31,7 @@
 		309F60D92109213300AD7E86 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F60D82109213300AD7E86 /* CustomTabBar.swift */; };
 		309F60DB2109341A00AD7E86 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F60DA2109341A00AD7E86 /* CustomNavigationBar.swift */; };
 		309F60DD21093F5F00AD7E86 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F60DC21093F5F00AD7E86 /* ProductModel.swift */; };
+		30AE6D1A212AD33A00F0AF0C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE6D19212AD33A00F0AF0C /* LoginVC.swift */; };
 		AD20C6C8C8761A22E8BFAE58 /* Pods_happyHour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0673902BE6516177848177C7 /* Pods_happyHour.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,9 @@
 		0673902BE6516177848177C7 /* Pods_happyHour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_happyHour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3006734F2109DEF50069BD4D /* ProductListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListVC.swift; sourceTree = "<group>"; };
 		30067353210A62290069BD4D /* ShopListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListCell.swift; sourceTree = "<group>"; };
+		3039BA25213C1B5700C15B4C /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		3039BA27213C1F3B00C15B4C /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3039BA29213C2AE300C15B4C /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 		303C282821206C10002C28F0 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		30424126211225AA000C74F7 /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon.png; sourceTree = "<group>"; };
 		304FFD2C2108C0DE00353500 /* happyHour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +53,7 @@
 		304FFD3B2108C0E100353500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		304FFD412108C15F00353500 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3050C346210B531C00BE356E /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
-		3050C348210B66BA00BE356E /* AddUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUnderLine.swift; sourceTree = "<group>"; };
+		3050C348210B66BA00BE356E /* AddUnderLineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUnderLineProtocol.swift; sourceTree = "<group>"; };
 		3050C34A210B67F700BE356E /* AddBorderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBorderProtocol.swift; sourceTree = "<group>"; };
 		30966148211336CB00FEA5E9 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		309F60CF2108D74900AD7E86 /* ShopListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListVC.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 		309F60D82109213300AD7E86 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		309F60DA2109341A00AD7E86 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		309F60DC21093F5F00AD7E86 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		30AE6D19212AD33A00F0AF0C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5B53CD49FAA873102347B69D /* Pods-happyHour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happyHour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happyHour/Pods-happyHour.debug.xcconfig"; sourceTree = "<group>"; };
 		E704DC8B5B0318CB6ED94E33 /* Pods-happyHour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happyHour.release.xcconfig"; path = "Pods/Target Support Files/Pods-happyHour/Pods-happyHour.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,8 +157,10 @@
 				309F60D82109213300AD7E86 /* CustomTabBar.swift */,
 				309F60DA2109341A00AD7E86 /* CustomNavigationBar.swift */,
 				3050C346210B531C00BE356E /* CustomImageView.swift */,
-				30067353210A62290069BD4D /* ShopListCell.swift */,
 				30966148211336CB00FEA5E9 /* SideBarView.swift */,
+				30067353210A62290069BD4D /* ShopListCell.swift */,
+				3039BA25213C1B5700C15B4C /* LoginButton.swift */,
+				3039BA29213C2AE300C15B4C /* SignUpTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +172,8 @@
 				309F60CF2108D74900AD7E86 /* ShopListVC.swift */,
 				309F60D12108D79200AD7E86 /* FavouriteShopsVC.swift */,
 				3006734F2109DEF50069BD4D /* ProductListVC.swift */,
+				30AE6D19212AD33A00F0AF0C /* LoginVC.swift */,
+				3039BA27213C1F3B00C15B4C /* SignUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				309F60D62109206A00AD7E86 /* DropShadowProtocol.swift */,
-				3050C348210B66BA00BE356E /* AddUnderLine.swift */,
+				3050C348210B66BA00BE356E /* AddUnderLineProtocol.swift */,
 				3050C34A210B67F700BE356E /* AddBorderProtocol.swift */,
 			);
 			path = Protocols;
@@ -257,6 +269,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-happyHour/Pods-happyHour-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -264,6 +277,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -318,13 +332,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				300673502109DEF50069BD4D /* ProductListVC.swift in Sources */,
+				3039BA26213C1B5700C15B4C /* LoginButton.swift in Sources */,
 				3050C347210B531C00BE356E /* CustomImageView.swift in Sources */,
-				3050C349210B66BA00BE356E /* AddUnderLine.swift in Sources */,
+				3050C349210B66BA00BE356E /* AddUnderLineProtocol.swift in Sources */,
 				303C282921206C10002C28F0 /* Networking.swift in Sources */,
+				30AE6D1A212AD33A00F0AF0C /* LoginVC.swift in Sources */,
 				30966149211336CB00FEA5E9 /* SideBarView.swift in Sources */,
+				3039BA28213C1F3B00C15B4C /* SignUpVC.swift in Sources */,
 				309F60D22108D79200AD7E86 /* FavouriteShopsVC.swift in Sources */,
 				309F60D02108D74900AD7E86 /* ShopListVC.swift in Sources */,
 				309F60D92109213300AD7E86 /* CustomTabBar.swift in Sources */,
+				3039BA2A213C2AE300C15B4C /* SignUpTextField.swift in Sources */,
 				309F60D72109206A00AD7E86 /* DropShadowProtocol.swift in Sources */,
 				3050C34B210B67F700BE356E /* AddBorderProtocol.swift in Sources */,
 				309F60DD21093F5F00AD7E86 /* ProductModel.swift in Sources */,

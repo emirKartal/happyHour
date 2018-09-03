@@ -17,8 +17,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     var locationManager = CLLocationManager()
-    var isSideBarOpen : Bool = false
     
+    var isSideBarOpen : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,7 @@ class HomeVC: UIViewController {
         self.locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
-        Networking.instance.getShops()
-        
-        DispatchQueue.main.async {
-            self.mapView.clear()
-        }
-        self.addMarker()
+        addMarker()
         
     }
     
@@ -68,18 +63,21 @@ extension HomeVC {
     
     func addMarker () {
         
-        for marker in Networking.instance.shopArray {
-            print(marker)
+        for shopMarker in Networking.instance.shopArray {
+           
+            let marker = GMSMarker()
+            
+            marker.position = CLLocationCoordinate2D(latitude: shopMarker.shopLat, longitude: shopMarker.shopLong)
+            marker.title = shopMarker.shopName
+            marker.snippet = "123 m."
+            marker.map = mapView
+            
         }
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 51.107885 , longitude: 17.038538)
-        marker.title = "Wroclaw"
-        marker.snippet = "Poland"
-        marker.map = mapView
         
         
     }
+    
     
 }
 
@@ -114,11 +112,8 @@ extension HomeVC : CLLocationManagerDelegate {
 
 extension HomeVC : GMSMapViewDelegate {
     
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        
-        performSegue(withIdentifier: "deneme", sender: nil)
-        return true
-        
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        performSegue(withIdentifier: "toProductListVC", sender: nil)
     }
     
 }

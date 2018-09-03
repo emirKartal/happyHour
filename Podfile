@@ -11,5 +11,6 @@ target 'happyHour' do
   pod 'Firebase/Auth’
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'SVProgressHUD'
 
 end

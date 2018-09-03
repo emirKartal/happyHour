@@ -7,29 +7,44 @@
 //
 
 import UIKit
+import FirebaseAuth
+import SVProgressHUD
 
 class SignUpVC: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: SignUpTextField!
+    @IBOutlet weak var passwordTextField: SignUpTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Tap Gesture Define
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        
+        SVProgressHUD.show(withStatus: "Creating")
+        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (userData, error) in
+            
+            if error != nil {
+                
+                SVProgressHUD.showError(withStatus: "Something Went Wrong!!!")
+                
+            } else {
+                
+                SVProgressHUD.dismiss()
+                self.performSegue(withIdentifier: "toHomeVC", sender: self)
+                
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func closeKeyboard() {
+        
+        emailTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+        
     }
-    */
-
 }

@@ -35,4 +35,6 @@ class Networking {
         
     }
     
+    //TODO: getPromotions by id function will add here... as well as try rxfirebase podfile
+    
 }

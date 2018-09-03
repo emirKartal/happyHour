@@ -10,12 +10,13 @@ import UIKit
 
 class LoginButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.darkGray
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.layer.cornerRadius = 12
+        
     }
-    */
 
 }
