@@ -17,6 +17,9 @@ class HomeVC: UIViewController {
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     var locationManager = CLLocationManager()
+    var userLong : CLLocationDegrees = 0.0
+    var userLat : CLLocationDegrees = 0.0
+    var distance : Double = 0.0
     
     var isSideBarOpen : Bool = false
     
@@ -27,6 +30,9 @@ class HomeVC: UIViewController {
         mapView.delegate = self
         self.locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
         
         addMarker()
         
@@ -55,8 +61,6 @@ class HomeVC: UIViewController {
         isSideBarOpen = !isSideBarOpen
         
     }
-    
-
 }
 
 extension HomeVC {
@@ -64,20 +68,37 @@ extension HomeVC {
     func addMarker () {
         
         for shopMarker in Networking.instance.shopArray {
-           
+            
+            distance = calculateDistance(lat1: userLat, lon1: userLong, lat2: shopMarker.shopLat, lon2: shopMarker.shopLong)
             let marker = GMSMarker()
             
             marker.position = CLLocationCoordinate2D(latitude: shopMarker.shopLat, longitude: shopMarker.shopLong)
             marker.title = shopMarker.shopName
-            marker.snippet = "123 m."
+            marker.snippet = "\(String(distance)) m."
             marker.map = mapView
             
         }
         
-        
-        
+    }
+    func rad2deg(rad:Double) -> Double {
+        return rad * 180.0 / .pi
+    }
+    func deg2rad(deg:Double) -> Double {
+        return deg * .pi / 180
     }
     
+    //MARK: Calculating of distance between user location and shops
+    
+    func calculateDistance(lat1:Double, lon1:Double, lat2:Double, lon2:Double) -> Double {
+        let theta = lon1 - lon2
+        var dist = sin(deg2rad(deg: lat1)) * sin(deg2rad(deg: lat2)) + cos(deg2rad(deg: lat1)) * cos(deg2rad(deg: lat2)) * cos(deg2rad(deg: theta))
+        dist = acos(dist)
+        dist = rad2deg(rad: dist)
+        dist = dist * 60 * 1.1515
+        dist = dist * 1.609344 * 1000  // mile to meter
+        dist = round(dist * 100) / 100
+        return dist
+    }
     
 }
 
@@ -103,8 +124,10 @@ extension HomeVC : CLLocationManagerDelegate {
         
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         
-        locationManager.stopUpdatingLocation()
+        userLat = location.coordinate.latitude
+        userLong = location.coordinate.longitude
         
+        locationManager.stopUpdatingLocation()
         
     }
     
