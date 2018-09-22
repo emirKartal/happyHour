@@ -17,13 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
         GMSServices.provideAPIKey("AIzaSyBE2zmT4UxWLIXiWe1mhrBiVOPNlk7JlbQ")
         GMSPlacesClient.provideAPIKey("AIzaSyBE2zmT4UxWLIXiWe1mhrBiVOPNlk7JlbQ")
         
+        Networking.instance.getShops()
+        
+        if Auth.auth().currentUser == nil {
+            
+            var initialVC : UIViewController?
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            initialVC = storyBoard.instantiateViewController(withIdentifier: "Login")
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialVC
+            self.window?.makeKeyAndVisible()
+            
+        }
         
         return true
     }

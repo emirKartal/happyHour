@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import FirebaseAuth
 
 class HomeVC: UIViewController {
 
@@ -26,7 +27,6 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         mapView.delegate = self
         self.locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -37,7 +37,7 @@ class HomeVC: UIViewController {
         addMarker()
         
     }
-    
+
     
     @IBAction func menuButtonTapped(_ sender: UIButton) {
         
@@ -61,6 +61,22 @@ class HomeVC: UIViewController {
         isSideBarOpen = !isSideBarOpen
         
     }
+    @IBAction func signOutButtonTapped(_ sender: UIButton) {
+        
+        do {
+            try Auth.auth().signOut()
+            
+            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! LoginVC
+            let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = loginVC
+            self.dismiss(animated: true, completion: nil)
+            
+        } catch{
+            print("Error")
+        }
+        
+    }
+    
 }
 
 extension HomeVC {

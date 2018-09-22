@@ -18,9 +18,9 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Networking.instance.getShops()
         
-        // Tap Gesture Define
+        
+        //MARK: Tap Gesture Define
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         self.view.addGestureRecognizer(tapGesture)
