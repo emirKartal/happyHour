@@ -9,6 +9,7 @@ target 'happyHour' do
   pod 'Firebase/Database’
   pod 'Firebase/Storage’
   pod 'Firebase/Auth’
+  pod 'RealmSwift'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'SVProgressHUD'
